@@ -1,0 +1,25 @@
+{
+  "name": "Sample Apify",
+  "description": "Apify on Heroku",
+  "keywords": [
+    "apify"
+  ],
+  "env": {
+    "PLAYWRIGHT_BUILDPACK_BROWSERS": {
+      "value": "chromium"
+    }
+  },
+  "addons": [
+    {
+      "plan": "papertrail:choklad"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/mxschmitt/heroku-playwright-buildpack.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
